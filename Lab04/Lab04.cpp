@@ -107,8 +107,24 @@ void geometric() {
 		}
 	}
 
-	cout << "Gemetroics=" << F << R << C << endl;
+	cout << "\nGenerating Series: ";
+	long long current_term = F;
+	long long sum = 0;
 
+	for (int i = 0; i < C; i++) {
+		cout << current_term;
+
+		
+		if (i < C - 1) {
+			cout << ", ";
+		}
+
+		sum += current_term;
+		current_term *= R;
+	}
+
+	cout << endl;
+	cout << "Total Sum of the Series = " << sum << endl;
 
 }
 
